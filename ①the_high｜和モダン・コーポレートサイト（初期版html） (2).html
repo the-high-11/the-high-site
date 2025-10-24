@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>THE HIGH合同会社｜不動産コンサル・内装・民泊・原状回復</title>
+  <meta name="description" content="THE HIGH合同会社（大阪市西区北堀江）。不動産コンサルティング、内装デザイン施工、民泊運営サポート、原状回復をワンストップで提供。和モダンの審美と収益性の両立。" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta property="og:title" content="THE HIGH合同会社" />
+  <meta property="og:description" content="不動産コンサル・内装・民泊・原状回復｜和モダンの審美と収益性の両立" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:image" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#1a1a1a;        /* 墨色 */
+      --wash:#faf8f6;       /* 和紙風の白 */
+      --line:#e6e0d9;       /* 罫線（薄いベージュ） */
+      --accent:#8c7051;     /* 焦げ茶×金の中間 */
+      --accent-2:#b08d57;   /* 金寄りのアクセント */
+      --muted:#76716a;      /* 補助テキスト */
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    html,body{margin:0;padding:0;background:var(--wash);color:var(--ink);font-family:"Noto Sans JP",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7;}
+    .serif{font-family:"Noto Serif JP",serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* ヘッダー */
+    header{position:sticky;top:0;z-index:50;background:rgba(250,248,246,.8);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+    .wrap{max-width:1100px;margin:auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:28px;height:28px;border-radius:6px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+    .brand h1{font-size:18px;letter-spacing:.14em;margin:0}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 10px;border-radius:10px}
+    nav a:hover{background:#efe9e2}
+
+    /* ヒーロー */
+    .hero{position:relative;overflow:hidden}
+    .hero .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:72px 20px}
+    .paper{position:absolute;inset:-20% -10% auto -10%;height:80%;pointer-events:none;opacity:.15;background-image:radial-gradient(rgba(0,0,0,.06) 1px, transparent 1.2px);background-size:10px 10px;}
+    .hero-title{font-size:clamp(28px,4vw,44px);margin:0 0 8px;letter-spacing:.06em}
+    .hero-copy{color:var(--muted);margin:0 0 26px;font-size:16px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);font-weight:600}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border-color:transparent}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .hero-card h3{margin:0 0 8px;font-size:16px}
+    .hero-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+    .chip{display:inline-block;background:#efe9e2;border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:12px}
+
+    /* セクション共通 */
+    section{padding:70px 0;border-top:1px solid var(--line)}
+    .section-title{font-size:22px;margin:0 0 12px}
+    .section-lead{color:var(--muted);margin:0 0 24px}
+
+    /* サービス */
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:10px}
+    .card h3{margin:0;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .badge{font-size:11px;color:#fff;background:var(--accent);padding:2px 8px;border-radius:999px;display:inline-block}
+
+    /* 会社概要 */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .about .panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    dl{display:grid;grid-template-columns:140px 1fr;gap:10px 14px;margin:0}
+    dt{color:#6a655f}
+
+    /* お問い合わせ */
+    form{display:grid;gap:14px}
+    .field{display:grid;gap:8px}
+    .field input,.field textarea{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit}
+    .field textarea{min-height:140px}
+
+    /* フッター */
+    footer{border-top:1px solid var(--line);padding:26px 0;color:#6a655f}
+
+    /* レスポンシブ */
+    @media (max-width: 980px){
+      .hero .inner{grid-template-columns:1fr;gap:30px;padding-top:54px}
+      .hero-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .about{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+    @media (max-width: 520px){
+      .cards{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1 class="serif">THE HIGH 合同会社</h1>
+      </div>
+      <nav aria-label="サイト内ナビゲーション">
+        <ul>
+          <li><a href="#service">事業紹介</a></li>
+          <li><a href="#about">会社概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ヒーロー -->
+    <section class="hero" aria-label="メイン">
+      <div class="paper" aria-hidden="true"></div>
+      <div class="wrap inner">
+        <div>
+          <p class="badge serif" style="display:inline-block">和モダン × 収益設計</p>
+          <h2 class="hero-title serif">空間に、価値を。</h2>
+          <p class="hero-copy">不動産の収益改善から、内装・原状回復、民泊運営の立ち上げまで。<br>THE HIGHは、審美と収益のバランスを設計する小回りの利くチームです。</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact" aria-label="お問い合わせへ">無料相談・お問い合わせ</a>
+            <a class="btn" href="#service" aria-label="事業紹介へ">事業紹介を見る</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="実績・強み">
+          <h3 class="serif">私たちの強み</h3>
+          <div class="hero-grid">
+            <div>
+              <span class="chip">投資 × デザイン</span>
+              <p style="margin:8px 0 0;color:var(--muted);font-size:14px">収益シミュレーションに基づく内装・導線計画</p>
+            </div>
+            <div>
+              <span class="chip">ワンストップ</span>
+              <p style="margin:8px 0 0;color:var(--muted);font-size:14px">原状回復→設計→設置→運用まで一貫対応</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 事業紹介 -->
+    <section id="service" aria-label="事業紹介">
+      <div class="wrap">
+        <h2 class="section-title serif">事業紹介</h2>
+        <p class="section-lead">不動産の価値を最大化するために、戦略と施工を統合。小規模でも成果が出る構成に絞っています。</p>
+        <div class="cards">
+          <article class="card" aria-label="不動産コンサルティング">
+            <h3 class="serif">不動産コンサルティング</h3>
+            <p>購入・売却・賃貸・民泊転用の戦略立案。キャッシュフロー設計、KPI設定、賃料改定の打ち手を並走。</p>
+          </article>
+          <article class="card" aria-label="内装・デザイン施工">
+            <h3 class="serif">内装・デザイン施工</h3>
+            <p>和モダンの素材選定（木・和紙・左官風）と照明計画。写真映えと運用耐久性のバランスを追求。</p>
+          </article>
+          <article class="card" aria-label="民泊運営サポート">
+            <h3 class="serif">民泊運営サポート</h3>
+            <p>法令・近隣配慮・家具家電・撮影・リスティング作成。清掃フローとレビュー改善の仕組み化。</p>
+          </article>
+          <article class="card" aria-label="原状回復">
+            <h3 class="serif">原状回復</h3>
+            <p>退去後のスピード復旧。コスト最適化しつつ入居率を落とさない美観ラインを死守します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 会社概要 -->
+    <section id="about" aria-label="会社概要">
+      <div class="wrap about">
+        <div class="panel">
+          <h2 class="section-title serif" style="margin-top:0">会社概要</h2>
+          <dl>
+            <dt>会社名</dt><dd>THE HIGH 合同会社</dd>
+            <dt>所在地</dt><dd>大阪府大阪市西区北堀江3丁目10番17－309号</dd>
+            <dt>事業内容</dt><dd>不動産コンサルティング／内装・デザイン施工／民泊運営サポート／原状回復</dd>
+            <dt>代表者</dt><dd>藤田智大</dd>
+            <dt>法人番号</dt><dd>7120003030793</dd>
+            <dt>設立</dt><dd>令和7年9月19日</dd>
+          </dl>
+        </div>
+        <div class="panel">
+          <h2 class="section-title serif" style="margin-top:0">ミッション</h2>
+          <p>「本質的な空間づくり」を通じて、資産価値と暮らしの質を両立させる。短期的な見映えだけでなく、運用・維持の観点まで含めて設計します。</p>
+          <ul style="margin:8px 0 0 18px;color:var(--muted)">
+            <li>収益性と審美性の両立</li>
+            <li>法令・運用を見据えた設計</li>
+            <li>小さく速く試す改善志向</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section id="contact" aria-label="お問い合わせ">
+      <div class="wrap">
+        <h2 class="section-title serif">お問い合わせ</h2>
+        <p class="section-lead">初回のご相談は無料です。物件の状況や目的を簡単にお知らせください。</p>
+        <form name="contact" method="post" action="#">
+          <div class="field">
+            <label for="name">お名前 *</label>
+            <input id="name" name="name" type="text" required placeholder="例）山田 太郎" />
+          </div>
+          <div class="field">
+            <label for="tel">電話番号</label>
+            <input id="tel" name="tel" type="tel" placeholder="例）06-xxxx-xxxx" />
+          </div>
+          <div class="field">
+            <label for="email">メールアドレス *</label>
+            <input id="email" name="email" type="email" required placeholder="例）info@example.com" />
+          </div>
+          <div class="field">
+            <label for="msg">ご相談内容 *</label>
+            <textarea id="msg" name="message" required placeholder="物件の所在地／現状／目的（収益改善・民泊転用・原状回復 など）"></textarea>
+          </div>
+          <button class="btn primary" type="submit">送信する</button>
+        </form>
+        <p style="margin-top:16px;color:var(--muted);font-size:14px">※ 送信先メール連携は未設定です。公開前にフォームの送信先を設定してください。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
+      <small>© <span id="y"></span> THE HIGH 合同会社</small>
+      <small>大阪府大阪市西区北堀江3丁目10番17－309号</small>
+    </div>
+  </footer>
+
+  <script>
+    // 年を自動反映
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
