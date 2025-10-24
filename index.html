@@ -199,27 +199,35 @@
       <div class="wrap">
         <h2 class="section-title serif">お問い合わせ</h2>
         <p class="section-lead">初回のご相談は無料です。物件の状況や目的を簡単にお知らせください。</p>
-        <form name="contact" method="post" action="#">
-          <div class="field">
-            <label for="name">お名前 *</label>
-            <input id="name" name="name" type="text" required placeholder="例）山田 太郎" />
-          </div>
-          <div class="field">
-            <label for="tel">電話番号</label>
-            <input id="tel" name="tel" type="tel" placeholder="例）06-xxxx-xxxx" />
-          </div>
-          <div class="field">
-            <label for="email">メールアドレス *</label>
-            <input id="email" name="email" type="email" required placeholder="例）info@example.com" />
-          </div>
-          <div class="field">
-            <label for="msg">ご相談内容 *</label>
-            <textarea id="msg" name="message" required placeholder="物件の所在地／現状／目的（収益改善・民泊転用・原状回復 など）"></textarea>
-          </div>
-          <button class="btn primary" type="submit">送信する</button>
-        </form>
-        <p style="margin-top:16px;color:var(--muted);font-size:14px">※ 送信先メール連携は未設定です。公開前にフォームの送信先を設定してください。</p>
-      </div>
+       <form name="contact" method="POST" action="https://formspree.io/f/xwprgjdb">
+  <div class="field">
+    <label for="name">お名前 *</label>
+    <input id="name" name="name" type="text" required placeholder="例）山田 太郎" />
+  </div>
+
+  <div class="field">
+    <label for="tel">電話番号</label>
+    <input id="tel" name="tel" type="tel" placeholder="例）06-xxxx-xxxx" />
+  </div>
+
+  <div class="field">
+    <label for="email">メールアドレス *</label>
+    <input id="email" name="email" type="email" required placeholder="例）info@example.com" />
+  </div>
+
+  <div class="field">
+    <label for="msg">ご相談内容 *</label>
+    <textarea id="msg" name="message" required
+      placeholder="物件の所在地／現状／目的（収益改善・民泊転用・原状回復 など）"></textarea>
+  </div>
+
+  <!-- 件名 -->
+  <input type="hidden" name="_subject" value="【THE HIGH】Webお問い合わせ">
+  <!-- スパム防止 -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <button class="btn primary" type="submit">送信する</button>
+
     </section>
   </main>
 
